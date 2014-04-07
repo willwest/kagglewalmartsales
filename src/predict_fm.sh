@@ -1,0 +1,1 @@
+../bin/libFM -task r -train ../out/combined.train.csv.svm.scale -test ../out/combined.test.csv.svm.scale -dim ’1,1,8’ -out ../out/predictions.fm

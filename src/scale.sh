@@ -1,0 +1,2 @@
+../bin/svm-scale -l 0 -u 1 -s ../out/range ../out/combined.train.csv.svm > ../out/combined.train.csv.svm.scale
+../bin/svm-scale -r ../out/range ../out/combined.test.csv.svm > ../out/combined.test.csv.svm.scale
