@@ -1,24 +1,12 @@
+require(lubridate)
+require(zoo)
+
 prepare.data <- function(df, features, stores){
-	# Combine store type and size with features
-	features <- merge(features, stores, by="Store")
 
-	# Get rid of excessive columns
-	features$IsHoliday <- NULL
-
-	# Merge features with data
-	df <- merge(df, features, by=c("Store","Date"))
-
-	df <- df[order(df$Store, df$Dept, df$Date),]
-
-	print(head(df))
-
-	# For now, don't use the Date column
-	# ...we will definitely need to use this later, but
-	# for a first try it isn't necessary
+	# Get rid of individual dates
 	df$Date <- NULL
 
-	# # Convert features into numeric
-
+	# Convert features into numeric
 	df$Store <- factor(df$Store)
 	df <- cbind(df, model.matrix( ~ Store - 1, data=df))
 	df$Store <- NULL
@@ -35,28 +23,20 @@ prepare.data <- function(df, features, stores){
 	df <- cbind(df, model.matrix( ~ IsHoliday - 1, data=df))
 	df$IsHoliday <- NULL
 
-	# df$Date <- factor(df$Date)
-	# df <- cbind(df, model.matrix( ~ Date - 1, data=df))
-	# df$Date <- NULL
+	df$Year <- NULL
+	df$Month <- NULL
+	df$Day <- NULL
 
 	# Covert all NA's to zeros
 	df[is.na(df)] <- 0
 
+	print(head(df))
+
 	return(df)
 }
 
-features <- read.csv("../data/features.csv", stringsAsFactors=FALSE)
-stores <- read.csv("../data/stores.csv", stringsAsFactors=FALSE)
-test <- read.csv("../data/test.csv", stringsAsFactors=FALSE)
-train <- read.csv("../data/train.csv", stringsAsFactors=FALSE)
-
-# Reorder columns so that target is left-most column
-train <- train[,c("Weekly_Sales","Store", "Dept","IsHoliday", "Date")]
-
-
-# Do the same for the test data, so they are consistent
-test$Weekly_Sales <- 0
-test <- test[,c("Weekly_Sales","Store", "Dept","IsHoliday", "Date")]
+test <- read.csv("../data/test.w.features.csv", stringsAsFactors=FALSE)
+train <- read.csv("../data/train.w.features.csv", stringsAsFactors=FALSE)
 
 train <- prepare.data(train, features, stores)
 test <- prepare.data(test, features, stores)
