@@ -1,4 +1,4 @@
-sample = open("../data/sampleSubmission.csv", 'r')
+sample = open("../data/sampleSubmission_clean.csv", 'r')
 predictions = open("../out/predictions.fm")
 
 outfile = open("../out/predictions.fm.submit", 'w')

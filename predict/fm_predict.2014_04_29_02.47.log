@@ -1,0 +1,167 @@
+----------------------------------------------------------------------------
+libFM
+  Version: 1.40
+  Author:  Steffen Rendle, steffen.rendle@uni-konstanz.de
+  WWW:     http://www.libfm.org/
+  License: Free for academic use. See license.txt.
+----------------------------------------------------------------------------
+Loading train...	
+has x = 0
+has xt = 1
+num_rows=115064	num_values=1410057	num_features=114	min_target=-1699	max_target=630999
+Loading test... 	
+has x = 0
+has xt = 1
+num_rows=115064	num_values=1594344	num_features=142	min_target=0	max_target=0
+#relations: 0
+Loading meta data...	
+#Iter=  0	Train=30963.7	Test=0.40919
+#Iter=  1	Train=30963.6	Test=0.242519
+#Iter=  2	Train=30963.4	Test=0.269074
+#Iter=  3	Train=30963.2	Test=0.351379
+#Iter=  4	Train=30963.4	Test=0.407928
+#Iter=  5	Train=30963.4	Test=0.352918
+#Iter=  6	Train=30963.2	Test=0.36907
+#Iter=  7	Train=30963.3	Test=0.405026
+#Iter=  8	Train=30962.6	Test=0.472323
+#Iter=  9	Train=30962.6	Test=0.489723
+#Iter= 10	Train=30961.8	Test=0.643384
+#Iter= 11	Train=30961	Test=0.840474
+#Iter= 12	Train=30959.9	Test=0.958497
+#Iter= 13	Train=30960.6	Test=1.16699
+#Iter= 14	Train=30958.4	Test=1.3877
+#Iter= 15	Train=30955.1	Test=1.81574
+#Iter= 16	Train=30952.1	Test=2.23142
+#Iter= 17	Train=30943.4	Test=3.04139
+#Iter= 18	Train=30863.1	Test=5.67013
+#Iter= 19	Train=23324	Test=323.181
+#Iter= 20	Train=7904.74	Test=892.097
+#Iter= 21	Train=7595.89	Test=1362.98
+#Iter= 22	Train=7437.55	Test=2140.19
+#Iter= 23	Train=7282.75	Test=4309.04
+#Iter= 24	Train=7144.81	Test=4447.58
+#Iter= 25	Train=7013.73	Test=4669.75
+#Iter= 26	Train=6896.19	Test=5444.25
+#Iter= 27	Train=6791.18	Test=5714.05
+#Iter= 28	Train=6690.02	Test=6842.12
+#Iter= 29	Train=6597.33	Test=8536.47
+#Iter= 30	Train=6513.54	Test=8544.51
+#Iter= 31	Train=6438.19	Test=8462.26
+#Iter= 32	Train=6367.85	Test=8530.36
+#Iter= 33	Train=6296.73	Test=9215.53
+#Iter= 34	Train=6186.34	Test=9649.21
+#Iter= 35	Train=6013.57	Test=9510.6
+#Iter= 36	Train=5790.99	Test=9408.41
+#Iter= 37	Train=5629.35	Test=9208.2
+#Iter= 38	Train=5547.77	Test=9471.93
+#Iter= 39	Train=5509.13	Test=9387.73
+#Iter= 40	Train=5484.41	Test=9816.45
+#Iter= 41	Train=5467.83	Test=9717.12
+#Iter= 42	Train=5452.41	Test=10779.8
+#Iter= 43	Train=5441.85	Test=10852.2
+#Iter= 44	Train=5427.56	Test=11436.7
+#Iter= 45	Train=5389.3	Test=11292.1
+#Iter= 46	Train=5272.26	Test=11170.5
+#Iter= 47	Train=5227.06	Test=11571.9
+#Iter= 48	Train=5204.86	Test=11584.6
+#Iter= 49	Train=5186.05	Test=12300.4
+#Iter= 50	Train=5167.55	Test=12957.7
+#Iter= 51	Train=5156.56	Test=13277.5
+#Iter= 52	Train=5146.31	Test=13162.1
+#Iter= 53	Train=5136.8	Test=13638.9
+#Iter= 54	Train=5126.67	Test=14091.2
+#Iter= 55	Train=5119.58	Test=14095.7
+#Iter= 56	Train=5110.92	Test=14425.7
+#Iter= 57	Train=5103.32	Test=14954.8
+#Iter= 58	Train=5096.31	Test=15534.2
+#Iter= 59	Train=5090.79	Test=16019.6
+#Iter= 60	Train=5084.52	Test=16872.6
+#Iter= 61	Train=5077.89	Test=17275.5
+#Iter= 62	Train=5072.24	Test=18343.7
+#Iter= 63	Train=5066.61	Test=18715.9
+#Iter= 64	Train=5060.31	Test=19244.2
+#Iter= 65	Train=5053.02	Test=19839
+#Iter= 66	Train=5049.45	Test=20519.9
+#Iter= 67	Train=5045.21	Test=20722.5
+#Iter= 68	Train=5039.13	Test=20849
+#Iter= 69	Train=5033.74	Test=21823
+#Iter= 70	Train=5029.21	Test=21708.7
+#Iter= 71	Train=5026.37	Test=22058.8
+#Iter= 72	Train=5021.51	Test=21799.6
+#Iter= 73	Train=5017.4	Test=21880.3
+#Iter= 74	Train=5014.31	Test=22940.3
+#Iter= 75	Train=5009.82	Test=22779.7
+#Iter= 76	Train=5005.35	Test=22833.8
+#Iter= 77	Train=5001.67	Test=22806.3
+#Iter= 78	Train=4999.5	Test=23068.9
+#Iter= 79	Train=4996.42	Test=23298.8
+#Iter= 80	Train=4992.03	Test=23188.7
+#Iter= 81	Train=4988.51	Test=23188.9
+#Iter= 82	Train=4985.14	Test=23748.4
+#Iter= 83	Train=4980.38	Test=23851
+#Iter= 84	Train=4976.15	Test=23858.6
+#Iter= 85	Train=4973.05	Test=23706.6
+#Iter= 86	Train=4967.45	Test=23483.4
+#Iter= 87	Train=4964.28	Test=23541.8
+#Iter= 88	Train=4959.87	Test=23737.6
+#Iter= 89	Train=4959.5	Test=23743.2
+#Iter= 90	Train=4953.58	Test=24109.4
+#Iter= 91	Train=4952.07	Test=24515
+#Iter= 92	Train=4948.55	Test=24751.4
+#Iter= 93	Train=4945.61	Test=25020.8
+#Iter= 94	Train=4941.97	Test=25240.8
+#Iter= 95	Train=4938.89	Test=25427.9
+#Iter= 96	Train=4936.56	Test=25387.1
+#Iter= 97	Train=4934.31	Test=25702.1
+#Iter= 98	Train=4930.36	Test=25925.4
+#Iter= 99	Train=4927.26	Test=25760.6
+#Iter=100	Train=4922.79	Test=25551
+#Iter=101	Train=4919.84	Test=25984.2
+#Iter=102	Train=4916.77	Test=26117.2
+#Iter=103	Train=4912.53	Test=26039.5
+#Iter=104	Train=4909.14	Test=26470.4
+#Iter=105	Train=4904.16	Test=26680.6
+#Iter=106	Train=4901.81	Test=26958.6
+#Iter=107	Train=4898.43	Test=26794.1
+#Iter=108	Train=4891.52	Test=27181
+#Iter=109	Train=4878.6	Test=27186.5
+#Iter=110	Train=4862.07	Test=27421
+#Iter=111	Train=4836.8	Test=28062.7
+#Iter=112	Train=4821.45	Test=27850.2
+#Iter=113	Train=4811.2	Test=27875
+#Iter=114	Train=4798.48	Test=28051.6
+#Iter=115	Train=4782.42	Test=28242.9
+#Iter=116	Train=4763.44	Test=28352.6
+#Iter=117	Train=4737.76	Test=28437.7
+#Iter=118	Train=4706.6	Test=29195.1
+#Iter=119	Train=4677.92	Test=29003.3
+#Iter=120	Train=4658.22	Test=29212.3
+#Iter=121	Train=4646.22	Test=29094.9
+#Iter=122	Train=4636.95	Test=29400.2
+#Iter=123	Train=4626.94	Test=29178.9
+#Iter=124	Train=4614.09	Test=29164.4
+#Iter=125	Train=4586.31	Test=29462.3
+#Iter=126	Train=4554.76	Test=29712.6
+#Iter=127	Train=4532.29	Test=29763.2
+#Iter=128	Train=4516.83	Test=29583.6
+#Iter=129	Train=4503.01	Test=29714.7
+#Iter=130	Train=4491.02	Test=30050.7
+#Iter=131	Train=4478.32	Test=30440.9
+#Iter=132	Train=4469.02	Test=30599
+#Iter=133	Train=4457.62	Test=30554.5
+#Iter=134	Train=4448.02	Test=30488.2
+#Iter=135	Train=4437.57	Test=30680.5
+#Iter=136	Train=4430.85	Test=30840.6
+#Iter=137	Train=4421.37	Test=31080.1
+#Iter=138	Train=4412.94	Test=31331.9
+#Iter=139	Train=4404.28	Test=31702.8
+#Iter=140	Train=4396.91	Test=31783.7
+#Iter=141	Train=4388.85	Test=31808.1
+#Iter=142	Train=4379.87	Test=31924.9
+#Iter=143	Train=4370.04	Test=32260.4
+#Iter=144	Train=4352.93	Test=32321.7
+#Iter=145	Train=4332.72	Test=32400.7
+#Iter=146	Train=4321.32	Test=32480.5
+#Iter=147	Train=4312.46	Test=32357.7
+#Iter=148	Train=4302.05	Test=32706
+#Iter=149	Train=4293.97	Test=32588

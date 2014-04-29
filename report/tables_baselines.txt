@@ -1,0 +1,51 @@
+type & tp & tn & fp & fn & avg_err \\ \hline
+cla & 6 & 2034 & 1602 & 3  \\ \hline
+con & 22 & 1346 & 2256 & 21  \\ \hline
+gen & 0 & 1600 & 2040 & 5  \\ \hline
+lab & 16 & 1084 & 2526 & 19  \\ \hline
+lib & 29 & 1165 & 2428 & 23  \\ \hline
+neg & 96 & 771 & 2708 & 70  \\ \hline
+pol & 102 & 644 & 2824 & 75  \\ \hline
+rac & 3 & 2182 & 1455 & 5  \\ \hline
+rel & 3 & 2078 & 1557 & 7  \\ \hline
+sen & 353 & 470 & 2526 & 296  \\ \hline
+total & 630 & 13374 & 21922 & 524  \\ \hline
+
+type & tp & tn & fp & fn & avg_err \\ \hline
+cla & 0 & 3636 & 0 & 9 \\ \hline
+con & 0 & 3602 & 0 & 43 \\ \hline
+gen & 0 & 3640 & 0 & 5 \\ \hline
+lab & 0 & 3610 & 0 & 35 \\ \hline
+lib & 0 & 3593 & 0 & 52 \\ \hline
+neg & 0 & 3479 & 0 & 166 \\ \hline
+pol & 0 & 3468 & 0 & 177 \\ \hline
+rac & 0 & 3637 & 0 & 8 \\ \hline
+rel & 0 & 3635 & 0 & 10 \\ \hline
+sen & 0 & 2996 & 0 & 649  \\ \hline
+total & 0 & 35296 & 0 & 1154 \\ \hline
+
+# SVM ALL NEITHER BASELINE
+1   cla       0.23
+2   con       1.23
+3   gen       0.14
+4   lab       0.98
+5   lib       1.50
+6   neg       4.86
+7   pol       4.96
+8   rac       0.23
+9   rel       0.30
+10  sen      17.82
+	total     3.23
+
+# MULTICLASS/FM ALL NEITHER BASELINE
+1   cla       0.23
+2   con       1.23
+3   gen       0.14
+4   lab       0.98
+5   lib       1.50
+6   neg       4.86
+7   pol       4.96
+8   rac       0.23
+9   rel       0.30
+10  sen      17.33
+	total     3.18

@@ -1,0 +1,167 @@
+----------------------------------------------------------------------------
+libFM
+  Version: 1.40
+  Author:  Steffen Rendle, steffen.rendle@uni-konstanz.de
+  WWW:     http://www.libfm.org/
+  License: Free for academic use. See license.txt.
+----------------------------------------------------------------------------
+Loading train...	
+has x = 0
+has xt = 1
+num_rows=0	num_values=0	num_features=0	min_target=3.40282e+38	max_target=-3.40282e+38
+Loading test... 	
+has x = 0
+has xt = 1
+num_rows=0	num_values=0	num_features=0	min_target=3.40282e+38	max_target=-3.40282e+38
+#relations: 0
+Loading meta data...	
+#Iter=  0	Train=nan	Test=nan
+#Iter=  1	Train=nan	Test=nan
+#Iter=  2	Train=nan	Test=nan
+#Iter=  3	Train=nan	Test=nan
+#Iter=  4	Train=nan	Test=nan
+#Iter=  5	Train=nan	Test=nan
+#Iter=  6	Train=nan	Test=nan
+#Iter=  7	Train=nan	Test=nan
+#Iter=  8	Train=nan	Test=nan
+#Iter=  9	Train=nan	Test=nan
+#Iter= 10	Train=nan	Test=nan
+#Iter= 11	Train=nan	Test=nan
+#Iter= 12	Train=nan	Test=nan
+#Iter= 13	Train=nan	Test=nan
+#Iter= 14	Train=nan	Test=nan
+#Iter= 15	Train=nan	Test=nan
+#Iter= 16	Train=nan	Test=nan
+#Iter= 17	Train=nan	Test=nan
+#Iter= 18	Train=nan	Test=nan
+#Iter= 19	Train=nan	Test=nan
+#Iter= 20	Train=nan	Test=nan
+#Iter= 21	Train=nan	Test=nan
+#Iter= 22	Train=nan	Test=nan
+#Iter= 23	Train=nan	Test=nan
+#Iter= 24	Train=nan	Test=nan
+#Iter= 25	Train=nan	Test=nan
+#Iter= 26	Train=nan	Test=nan
+#Iter= 27	Train=nan	Test=nan
+#Iter= 28	Train=nan	Test=nan
+#Iter= 29	Train=nan	Test=nan
+#Iter= 30	Train=nan	Test=nan
+#Iter= 31	Train=nan	Test=nan
+#Iter= 32	Train=nan	Test=nan
+#Iter= 33	Train=nan	Test=nan
+#Iter= 34	Train=nan	Test=nan
+#Iter= 35	Train=nan	Test=nan
+#Iter= 36	Train=nan	Test=nan
+#Iter= 37	Train=nan	Test=nan
+#Iter= 38	Train=nan	Test=nan
+#Iter= 39	Train=nan	Test=nan
+#Iter= 40	Train=nan	Test=nan
+#Iter= 41	Train=nan	Test=nan
+#Iter= 42	Train=nan	Test=nan
+#Iter= 43	Train=nan	Test=nan
+#Iter= 44	Train=nan	Test=nan
+#Iter= 45	Train=nan	Test=nan
+#Iter= 46	Train=nan	Test=nan
+#Iter= 47	Train=nan	Test=nan
+#Iter= 48	Train=nan	Test=nan
+#Iter= 49	Train=nan	Test=nan
+#Iter= 50	Train=nan	Test=nan
+#Iter= 51	Train=nan	Test=nan
+#Iter= 52	Train=nan	Test=nan
+#Iter= 53	Train=nan	Test=nan
+#Iter= 54	Train=nan	Test=nan
+#Iter= 55	Train=nan	Test=nan
+#Iter= 56	Train=nan	Test=nan
+#Iter= 57	Train=nan	Test=nan
+#Iter= 58	Train=nan	Test=nan
+#Iter= 59	Train=nan	Test=nan
+#Iter= 60	Train=nan	Test=nan
+#Iter= 61	Train=nan	Test=nan
+#Iter= 62	Train=nan	Test=nan
+#Iter= 63	Train=nan	Test=nan
+#Iter= 64	Train=nan	Test=nan
+#Iter= 65	Train=nan	Test=nan
+#Iter= 66	Train=nan	Test=nan
+#Iter= 67	Train=nan	Test=nan
+#Iter= 68	Train=nan	Test=nan
+#Iter= 69	Train=nan	Test=nan
+#Iter= 70	Train=nan	Test=nan
+#Iter= 71	Train=nan	Test=nan
+#Iter= 72	Train=nan	Test=nan
+#Iter= 73	Train=nan	Test=nan
+#Iter= 74	Train=nan	Test=nan
+#Iter= 75	Train=nan	Test=nan
+#Iter= 76	Train=nan	Test=nan
+#Iter= 77	Train=nan	Test=nan
+#Iter= 78	Train=nan	Test=nan
+#Iter= 79	Train=nan	Test=nan
+#Iter= 80	Train=nan	Test=nan
+#Iter= 81	Train=nan	Test=nan
+#Iter= 82	Train=nan	Test=nan
+#Iter= 83	Train=nan	Test=nan
+#Iter= 84	Train=nan	Test=nan
+#Iter= 85	Train=nan	Test=nan
+#Iter= 86	Train=nan	Test=nan
+#Iter= 87	Train=nan	Test=nan
+#Iter= 88	Train=nan	Test=nan
+#Iter= 89	Train=nan	Test=nan
+#Iter= 90	Train=nan	Test=nan
+#Iter= 91	Train=nan	Test=nan
+#Iter= 92	Train=nan	Test=nan
+#Iter= 93	Train=nan	Test=nan
+#Iter= 94	Train=nan	Test=nan
+#Iter= 95	Train=nan	Test=nan
+#Iter= 96	Train=nan	Test=nan
+#Iter= 97	Train=nan	Test=nan
+#Iter= 98	Train=nan	Test=nan
+#Iter= 99	Train=nan	Test=nan
+#Iter=100	Train=nan	Test=nan
+#Iter=101	Train=nan	Test=nan
+#Iter=102	Train=nan	Test=nan
+#Iter=103	Train=nan	Test=nan
+#Iter=104	Train=nan	Test=nan
+#Iter=105	Train=nan	Test=nan
+#Iter=106	Train=nan	Test=nan
+#Iter=107	Train=nan	Test=nan
+#Iter=108	Train=nan	Test=nan
+#Iter=109	Train=nan	Test=nan
+#Iter=110	Train=nan	Test=nan
+#Iter=111	Train=nan	Test=nan
+#Iter=112	Train=nan	Test=nan
+#Iter=113	Train=nan	Test=nan
+#Iter=114	Train=nan	Test=nan
+#Iter=115	Train=nan	Test=nan
+#Iter=116	Train=nan	Test=nan
+#Iter=117	Train=nan	Test=nan
+#Iter=118	Train=nan	Test=nan
+#Iter=119	Train=nan	Test=nan
+#Iter=120	Train=nan	Test=nan
+#Iter=121	Train=nan	Test=nan
+#Iter=122	Train=nan	Test=nan
+#Iter=123	Train=nan	Test=nan
+#Iter=124	Train=nan	Test=nan
+#Iter=125	Train=nan	Test=nan
+#Iter=126	Train=nan	Test=nan
+#Iter=127	Train=nan	Test=nan
+#Iter=128	Train=nan	Test=nan
+#Iter=129	Train=nan	Test=nan
+#Iter=130	Train=nan	Test=nan
+#Iter=131	Train=nan	Test=nan
+#Iter=132	Train=nan	Test=nan
+#Iter=133	Train=nan	Test=nan
+#Iter=134	Train=nan	Test=nan
+#Iter=135	Train=nan	Test=nan
+#Iter=136	Train=nan	Test=nan
+#Iter=137	Train=nan	Test=nan
+#Iter=138	Train=nan	Test=nan
+#Iter=139	Train=nan	Test=nan
+#Iter=140	Train=nan	Test=nan
+#Iter=141	Train=nan	Test=nan
+#Iter=142	Train=nan	Test=nan
+#Iter=143	Train=nan	Test=nan
+#Iter=144	Train=nan	Test=nan
+#Iter=145	Train=nan	Test=nan
+#Iter=146	Train=nan	Test=nan
+#Iter=147	Train=nan	Test=nan
+#Iter=148	Train=nan	Test=nan
+#Iter=149	Train=nan	Test=nan

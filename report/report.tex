@@ -1,0 +1,81 @@
+\documentclass{article}
+%\documentclass[journal]{IEEEtran}
+%\documentclass{report}
+%\documentclass{acta}
+
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[labelfont=bf]{caption}
+\usepackage{natbib}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{numprint}
+\usepackage{pbox}
+
+\begin{document}
+
+\title{Kaggle Competition: Walmart Weekly Sales Forecasting}
+\author{William West}
+
+\maketitle
+
+\section{Introduction}
+
+Kaggle is a website that hosts data mining competitions. Typically, companies will organize a competition on Kaggle by offering a sample dataset, a well-defined problem, and some incentive for competing, whether it be some monetary prize, internship, or job. Data Scientists can then compete with one another for the best performance, sometimes collaborating with one another and learning new things in the process.
+
+The Walmart Weekly Sales Forecasting competition asks competitors to predict the weekly sales for a set of store/department pairs in 2013, given the weekly sales from 2010-2012. Competitors are not permitted to use any outside data source; only data provided through the competition may be used.
+
+\subsection{Dataset Description}
+
+The dataset consists of four data files: \emph{features.csv}, \emph{train.csv}, \emph{test.csv}, and \emph{stores.csv}.
+
+\begin{itemize}
+\item The \emph{train.csv} and \emph{test.csv} files contain the weekly sales for each (store, department, date) triple. Note that the test file contains null entries for the weekly sales column, as expected
+\item The \emph{features.csv} file contains the temperature, fuel price, markdowns, CPI, unemployment rate, and a holiday indicator for each (store, department, date) triple
+\item The \emph{stores.csv} file contains the size and type of each store
+\end{itemize}
+
+We combine all files into two distinct datasets--the training set and test set. Each set contains all features and the weekly sales for each (store, department, date) triple. We will assume that these files are combined for the remainder of this report.
+
+
+\subsection{Task}
+The task for this competition is to predict the weekly sales in 2013 for several stores/departments. 
+
+
+\section{Data Exploration}
+
+\subsection{Holidays}
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{width=.6\textwidth}
+    \includegraphics[width=8in]{../out/weekly_sales.pdf}
+    \caption{Weekly Sales of store\_1, highlighting weeks marked as holidays}
+    \label{weekly_sales}
+\end{figure}
+
+\subsection{Markdowns}
+
+\section{Feature Extraction}
+
+\section{Modeling}
+
+\section{Evaluation}
+
+\section{Conclusion}
+
+% \begin{table}[H]
+%     \centering
+%     \captionsetup{width=.6\textwidth}
+%     \begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+%     \hline
+%     type & total & error & error rate & random error rate & num train & num test & test error rate & random test error rate \\ \hline
+%     cla & 1047 & 0 & 0.0 & 0.19 & 5 & 4 & 0.0 & 50.0 \\ \hline
+%     \end{tabular}
+%     \caption{binary weighting, source, pos, readability, \textbf{subjectivity}}
+% \end{table}
+
+
+\bibliographystyle{plain}
+\bibliography{lib}
+\end{document}

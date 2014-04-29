@@ -2,7 +2,7 @@ require(ggplot2)
 
 theme_set(theme_gray(base_size = 18))
 
-df <- read.csv('../../data/train.w.features.csv', header=TRUE, stringsAsFactors=TRUE)
+df <- read.csv('../data/train.w.features.csv', header=TRUE, stringsAsFactors=TRUE)
 
 ##########################################
 ####### Data Exploration: Holidays #######

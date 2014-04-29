@@ -17,6 +17,10 @@ merge.data <- function(df){
 	df$Date <- as.Date((strptime(df$Date, "%Y-%m-%d")))
 	df <- cbind(df, Year = year(df$Date), Month = month(df$Date), Day = day(df$Date))
 
+	# add feature for previous year
+	df$prevYear <- df$Year-1
+
+	return(df)
 }
 
 features <- read.csv("../data/features.csv", stringsAsFactors=FALSE)
