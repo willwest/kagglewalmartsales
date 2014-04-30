@@ -37,9 +37,10 @@ The dataset consists of four data files: \emph{features.csv}, \emph{train.csv}, 
 
 We combine all files into two distinct datasets--the training set and test set. Each set contains all features and the weekly sales for each (store, department, date) triple. We will assume that these files are combined for the remainder of this report.
 
+The training data contains weekly sales from February 2010 to October 2012, and the test data contains weekly sales from November 2012 to July 2013. 
 
 \subsection{Task}
-The task for this competition is to predict the weekly sales in 2013 for several stores/departments. 
+The task for this competition is to predict the weekly sales in 2013 for several stores/departments. While the evaluation method is not explicitly released, we are told that greater importance is given to weeks in which holidays occur.
 
 \section{Background: Forecasting and Time Series Analysis}
 
@@ -52,12 +53,26 @@ Seasonality is used to describe the way in which a time series goes through cycl
 Using the same example of water consumption in New Jersey, consider how water consumption may increase or decrease \emph{over time}. That is, over the entire 10 years, what is the \emph{trend} of water consumption? Perhaps there are strict laws put into place 5 years into the time series that gradually limit the amount of water companies are permitted to use in a given year. In that case, we would see a gradual decline in water consumption over the last 5 years of the time series. This is considered the \emph{trend} of the time series.
 
 \subsection{Forecasting: Pattern Recognition for Time Series}
-When dealing with time series data, we often want to 
+When dealing with time series data, we often want to use past time series data to predict what will happen in the future. This can be framed as a type of pattern recognition in which we look to recognize the patterns found within the trend and seasonality of a time series. By doing such, we can make sensible predictions of the future.
+
+It is important to be realistic when presenting forecasting results. Forecasting is different from other types of pattern recognition in that often the \emph{state of the world} changes drastically. Consider the classic pattern recognition example of building a recognition system for classifying types of fish. We can be reasonably certain that the types of fish we encounter will not drastically change. While anything is possible, we can say with high probability that our recognition system will remain accurate for the near future. However, forecasting problems often don't carry this same assumption.
+
+By nature, the domain spaces where forecasting is used are unpredictable--questions about weather patters, sensor data, economics, etc. can vary drastically with small or large changes in environment. For example, perhaps most years, the week before Christmas brings drastically high profits for grocery stores. As such, a forecasting system built to predict weekly grocery store sales predicts very high sales for the week before Christmas next year. What happens if there is a massive blizzard that week? Our prediction will be drastically incorrect. It is vital to keep in mind the dramatic variation that can occur between predicted values and actual values in forecasting problems.
 
 
 \section{Data Exploration}
+First, to get an idea of what the time series looks like, we average the sales across all stores and departments for each week. The graph is shown in Figure~\ref{line_all}. We see that there are significant peaks around the end of each year, one during November (Black Friday) and one during December (Christmas). The seasonality of the time series is evident, and it is also clear that there is a general downward trend between the peaks in 2011 and 2012. Shoppers spent less during the weeks before Christmas in 2012 than in 2011.
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{width=.6\textwidth}
+    \includegraphics[width=7in]{../out/line_all.pdf}
+    \caption{Line graph of time series}
+    \label{line_all}
+\end{figure}
 
 \subsection{Features}
+To get an idea of how each of the predictor variables (features) interacts with one another, we look at a scatterplot matrix capturing the correlation between variables, and the distribution of each variable.
 
 \begin{figure}[H]
     \centering
@@ -67,38 +82,57 @@ When dealing with time series data, we often want to
     \label{weekly_sales}
 \end{figure}
 
+We can see that there is a very slight correlation between fuel price and temperature, and a slightly negative correlation between unemployment and CPI.
+
 
 \subsection{Holidays}
+
+In order to better visualize how holidays affect sales figures, we choose a random store and look at the time series, highlighting the weeks in which there is a holiday. This is shown in Figure~\ref{weekly_sales}. We can see that often peaks can be found in the sales of the surrounding weeks, but not necessarily in the holiday week itself. This intuitively makes sense: while the week before Christmas may bring large sales numbers, the week \emph{of} Christmas is more likely to bring lower sales numbers, as people are traveling and spending time with family.
 
 \begin{figure}[H]
     \centering
     \captionsetup{width=.6\textwidth}
     \includegraphics[width=8in]{../out/weekly_sales.pdf}
-    \caption{Weekly Sales of store\_1, highlighting weeks marked as holidays}
+    \caption{Weekly Sales of random store, highlighting weeks marked as holidays}
     \label{weekly_sales}
 \end{figure}
 
-\subsection{Markdowns}
+Though Figure~\ref{weekly_sales} gives us a good idea of how weekly sales are distributed for a random store, it would be better to see how holidays impact sales over the entire dataset. Figure~\ref{avg_sales} shows the average weekly sales across all stores and departments, again highlighting the weeks marked as holidays. The absence of the peaks we saw for the random store in Figure~\ref{weekly_sales} is an indication that these peaks may only occur for specific departments or stores. Thus, we must take the store number and department number into account when forecasting, or our predictions will be too general.
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{width=.6\textwidth}
+    \includegraphics[width=8in]{../out/avg_sales.pdf}
+    \caption{Average weekly sales across all stores/departments, highlighting weeks marked as holidays}
+    \label{avg_sales}
+\end{figure}
 
 \section{Feature Extraction}
 
+\subsection{Previous Year's Sales}
+Intuitively, it makes sense that a good predictor for weekly sales in 2013 are the weekly sales that we saw in 2012. Thus, we create a submission that, for each testing instance, simply predicts that the weekly sales will be equal to the weekly sales from the year before. To do this, we assign a month\_id for each week in 2011/2012, and 2012/2013 from 1 to 52, and then simply perform a merge between the month\_ids in the training set vs the test set. 
+
+\subsection{Smoothed Sales}
+While the previous year's sales proved to be a good predictor, they don't take into account that the weeks between two years occur at different intervals. That is, June 1st may occur on a Tuesday one year, and a Friday another year. Since each measurement consists of a week from Saturday - Friday, the week containing June 1st in one year would contain many different days than the week containing June 1st in another year. In order to mitigate this problem of shifting intervals, we choose to generate smoothed sales predictions that are an average of the weeks \emph{surrounding} the previous year's week.
+
+For each week in the test set, we extract the date of Friday in that week. We then subtract a year, obtaining the same date but a year before. Then, we calculate which day of the week that date is on, and find the date of the previous Friday and the next Friday. The measurements for those two weeks are then averaged and used as the previous year's sales predictor. We found this performance obtained a better score than the simple previous year's sales model.
+
+\subsection{Other Predictors}
+
+The other features provided by the dataset include: temperature, consumer price index (CPI), unemployment rate, fuel price, markdowns, store size, and store type. For each numerical feature, we scale the feature to be between 0 and 1 using libSVM's scaling library \cite{chang2011libsvm}. For each categorical variable, we use dummy coding to represent each $n$-category feature by $n-1$ indicator features.
+
 \section{Modeling}
 
+For modeling, we use all features given in the provided dataset. We test using a factorization machine model, which can be used for regression or classification \cite{rendle2010factorization}. This model decomposes the feature space into a set of latent factors, which capture the interactions between each of the feature variables, including categorical variables. That is, it will be able to capture the interaction between the various features and the store/department type. The equation is given below:
+
+\begin{equation}
+\label{eq:fm}
+\hat{y}(\mathbf{x}):= w_0 + \sum_{j=1}^{p} w_j x_j + \sum_{j=1}^{p} \sum_{j^{\prime}=j+1}^{p} x_j x_{j^{\prime}} \sum_{f=1}^{k} v_{j,f}, v_{j^{\prime}},f
+\end{equation}
+
+
 \section{Evaluation}
-
-\section{Conclusion}
-
-% \begin{table}[H]
-%     \centering
-%     \captionsetup{width=.6\textwidth}
-%     \begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
-%     \hline
-%     type & total & error & error rate & random error rate & num train & num test & test error rate & random test error rate \\ \hline
-%     cla & 1047 & 0 & 0.0 & 0.19 & 5 & 4 & 0.0 & 50.0 \\ \hline
-%     \end{tabular}
-%     \caption{binary weighting, source, pos, readability, \textbf{subjectivity}}
-% \end{table}
-
+Surprisingly, the best predictor was the smoothed last year's sales. When using the factorization machine, we found that our performance gradually decreased as we added additional features. It is likely that more statistical modeling is necessary to extract meaning from these features, such as manually correcting for department-specific trends. While this is trivial to calculate, obtaining good performance through manual modeling is outside of the scope of this project, though we hope to attempt to add this before the final contest deadline.
 
 \bibliographystyle{plain}
 \bibliography{lib}

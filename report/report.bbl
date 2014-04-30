@@ -1,3 +1,15 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{chang2011libsvm}
+Chih-Chung Chang and Chih-Jen Lin.
+\newblock Libsvm: a library for support vector machines.
+\newblock {\em ACM Transactions on Intelligent Systems and Technology (TIST)},
+  2(3):27, 2011.
+
+\bibitem{rendle2010factorization}
+Steffen Rendle.
+\newblock Factorization machines.
+\newblock In {\em Data Mining (ICDM), 2010 IEEE 10th International Conference
+  on}, pages 995--1000. IEEE, 2010.
 
 \end{thebibliography}

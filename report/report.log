@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  30 APR 2014 10:30
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  30 APR 2014 18:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -310,59 +310,78 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 33.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 46.
+(Font)              <7> on input line 47.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 46.
+(Font)              <5> on input line 47.
  [1
 
 {/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<../out/features_scatter.pdf, id=13, 505.89pt x 505.89pt>
+<../out/line_all.pdf, id=13, 867.24pt x 289.08pt>
+File: ../out/line_all.pdf Graphic file (type pdf)
+ <use ../out/line_all.pdf>
+Package pdftex.def Info: ../out/line_all.pdf used on input line 69.
+(pdftex.def)             Requested size: 505.89pt x 168.63252pt.
+
+<../out/features_scatter.pdf, id=14, 505.89pt x 505.89pt>
 File: ../out/features_scatter.pdf Graphic file (type pdf)
 
 <use ../out/features_scatter.pdf>
-Package pdftex.def Info: ../out/features_scatter.pdf used on input line 65.
+Package pdftex.def Info: ../out/features_scatter.pdf used on input line 80.
 (pdftex.def)             Requested size: 505.89pt x 505.89645pt.
- [2]
-<../out/weekly_sales.pdf, id=17, 867.24pt x 505.89pt>
+ [2 <../out/line_all.pdf>]
+<../out/weekly_sales.pdf, id=24, 867.24pt x 289.08pt>
 File: ../out/weekly_sales.pdf Graphic file (type pdf)
 
 <use ../out/weekly_sales.pdf>
-Package pdftex.def Info: ../out/weekly_sales.pdf used on input line 76.
-(pdftex.def)             Requested size: 578.15999pt x 337.27718pt.
+Package pdftex.def Info: ../out/weekly_sales.pdf used on input line 95.
+(pdftex.def)             Requested size: 578.15999pt x 192.72981pt.
 
-Overfull \hbox (36.13498pt too wide) in paragraph at lines 76--77
+Overfull \hbox (36.13498pt too wide) in paragraph at lines 95--96
  [][] 
  []
 
-[3 <../out/features_scatter.pdf>] (./report.bbl
+[3 <../out/features_scatter.pdf>]
+<../out/avg_sales.pdf, id=34, 867.24pt x 289.08pt>
+File: ../out/avg_sales.pdf Graphic file (type pdf)
+ <use ../out/avg_sales.pdf>
+Package pdftex.def Info: ../out/avg_sales.pdf used on input line 105.
+(pdftex.def)             Requested size: 578.15999pt x 192.72981pt.
 
-Package natbib Warning: Empty `thebibliography' environment on input line 3.
+Overfull \hbox (36.13498pt too wide) in paragraph at lines 105--106
+ [][] 
+ []
 
-) [4 <../out/weekly_sales.pdf>] (./report.aux)
+[4 <../out/weekly_sales.pdf> <../out/avg_sales.pdf>] (./report.bbl) [5]
+(./report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3934 strings out of 493488
- 60204 string characters out of 3141326
- 127110 words of memory out of 3000000
- 7198 multiletter control sequences out of 15000+200000
- 8241 words of font info for 29 fonts, out of 3000000 for 9000
+ 3957 strings out of 493488
+ 60651 string characters out of 3141326
+ 127164 words of memory out of 3000000
+ 7217 multiletter control sequences out of 15000+200000
+ 8860 words of font info for 31 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 42i,6n,40p,703b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,6n,40p,703b,323s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
-usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
-r/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
-local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
-ocal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/loc
-al/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on report.pdf (4 pages, 181464 bytes).
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
+r/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
+cal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loca
+l/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
+exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texl
+ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
+e/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on report.pdf (5 pages, 244015 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
+ 99 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

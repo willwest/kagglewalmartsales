@@ -16,20 +16,23 @@ prepare.data <- function(df){
   # Convert features into numeric
   df$Store <- factor(df$Store)
   df <- cbind(df, model.matrix( ~ Store - 1, data=df))
+  df$Store1 <- NULL
   df$Store <- NULL
   
   df$Dept <- factor(df$Dept)
   df <- cbind(df, model.matrix( ~ Dept - 1, data=df))
+  df$Dept1 <- NULL
   df$Dept <- NULL
   
   df$Type <- factor(df$Type)
   df <- cbind(df, model.matrix( ~ Type - 1, data=df))
+  df$TypeC <- NULL
   df$Type <- NULL
   
   df$IsHoliday <- factor(df$IsHoliday)
   df <- cbind(df, model.matrix( ~ IsHoliday - 1, data=df))
-  df$IsHoliday <- NULL
   df$IsHolidayFALSE <- NULL
+  df$IsHoliday <- NULL
   
   # get rid of extraneous data
   df$Year <- NULL
@@ -40,12 +43,9 @@ prepare.data <- function(df){
   df$prev_friday <- NULL
   df$prev_friday_sales <- NULL
   df$next_friday_sales <- NULL
-
-  # Convert date string to Date class
-  df$Date <- as.Date(df$Date)
   
   # for now, get rid of date
-  df$Date <- NULL
+  #df$Date <- NULL
   
   # Covert all NA's to zeros
   df[is.na(df)] <- 0
@@ -74,7 +74,62 @@ prepare.data2 <- function(df){
   df$next_friday_sales <- NULL
   
   # for now, get rid of date
-  df$Date <- NULL
+  #df$Date <- NULL
+  
+  # Covert all NA's to zeros
+  df[is.na(df)] <- 0
+  
+  return(df)
+}
+
+
+
+prepare.data3 <- function(df){
+  
+  # Convert features into numeric
+  df$Store <- factor(df$Store)
+  df <- cbind(df, model.matrix( ~ Store - 1, data=df))
+  df$Store1 <- NULL
+  df$Store <- NULL
+  
+  df$Dept <- factor(df$Dept)
+  df <- cbind(df, model.matrix( ~ Dept - 1, data=df))
+  df$Dept1 <- NULL
+  df$Dept <- NULL
+  
+  df$Type <- factor(df$Type)
+  df <- cbind(df, model.matrix( ~ Type - 1, data=df))
+  df$TypeC <- NULL
+  df$Type <- NULL
+  
+  df$IsHoliday <- factor(df$IsHoliday)
+  df <- cbind(df, model.matrix( ~ IsHoliday - 1, data=df))
+  df$IsHolidayFALSE <- NULL
+  df$IsHoliday <- NULL
+  
+  # get rid of extraneous data
+  df$Year <- NULL
+  df$Month <- NULL
+  df$Day <- NULL
+  df$prevYear <- NULL
+  df$next_friday <- NULL
+  df$prev_friday <- NULL
+  df$prev_friday_sales <- NULL
+  df$next_friday_sales <- NULL
+  df$Temperature <- NULL
+  df$Fuel_Price <- NULL
+  df$MarkDown1 <- NULL
+  df$MarkDown2 <- NULL
+  df$MarkDown3 <- NULL
+  df$MarkDown4 <- NULL
+  df$MarkDown5 <- NULL
+  df$CPI <- NULL
+  df$Unemployment <- NULL
+  df$Size <- NULL
+  
+  
+  # for now, get rid of date
+  #df$Date <- NULL
   
   # Covert all NA's to zeros
   df[is.na(df)] <- 0
@@ -100,12 +155,22 @@ get.holiday.type <- function(df){
   
   df$Date <- NULL
   
-  print(df)
   return(df)
 }
 
-train.prepared <- prepare.data2(train)
-test.prepared <- prepare.data2(test)
+train.w.holidays <- get.holiday.type(train)
+test.w.holidays <- get.holiday.type(test)
+
+train.prepared <- prepare.data3(train.w.holidays)
+test.prepared <- prepare.data3(test.w.holidays)
+
+# train.prepared$Weekly_Sales <- train.prepared$Weekly_Sales - train.prepared$prediction
+# train.prepared$prediction <- NULL
+
+# test.prepared$prediction <- NULL
+
+#train.prepared <- prepare.data2(train)
+#test.prepared <- prepare.data2(test)
 
 # Write training data to file
 write.table(train.prepared, file="../out/combined.train.csv", row.names=FALSE, col.names=FALSE, sep=',')
