@@ -41,8 +41,32 @@ We combine all files into two distinct datasets--the training set and test set. 
 \subsection{Task}
 The task for this competition is to predict the weekly sales in 2013 for several stores/departments. 
 
+\section{Background: Forecasting and Time Series Analysis}
+
+A time series is simply a group of measurements which are taken in a non-random order. For example, the set of data captured by a temperature sensor is most likely taken at regular intervals, whether these be every hour, minute, or second. We can assume that each measurement is related to all other measurements by some linear or (most often) non-linear function. Given a measurement of $77\,^{\circ}\mathrm{F}$, for example, the two surrounding measurements (taken before and after, respectively) have a high probability of being close to $77\,^{\circ}\mathrm{F}$. This is due to a characteristic of time series data called \emph{seasonality}, which we discuss more below.
+
+\subsection{Seasonality}
+Seasonality is used to describe the way in which a time series goes through cycles as time goes on. For example, consider measurements of monthly water consumption in New Jersey over ten years. While in some states, water consumption may stay relatively constant year over year, New Jersey does not follow the same pattern. Since New Jersey experiences hot summer months, water consumption will be higher during those months, resulting in a time series that exhibits regular peaks during those months every year. Thus, a graph of the time series would show ten regularly-spaced peaks. This is considered the \emph{seasonality} of the time series.
+
+\subsection{Trend}
+Using the same example of water consumption in New Jersey, consider how water consumption may increase or decrease \emph{over time}. That is, over the entire 10 years, what is the \emph{trend} of water consumption? Perhaps there are strict laws put into place 5 years into the time series that gradually limit the amount of water companies are permitted to use in a given year. In that case, we would see a gradual decline in water consumption over the last 5 years of the time series. This is considered the \emph{trend} of the time series.
+
+\subsection{Forecasting: Pattern Recognition for Time Series}
+When dealing with time series data, we often want to 
+
 
 \section{Data Exploration}
+
+\subsection{Features}
+
+\begin{figure}[H]
+    \centering
+    \captionsetup{width=.6\textwidth}
+    \includegraphics[width=7in]{../out/features_scatter.pdf}
+    \caption{Scatterplot matrix: random sample of feature values. Upper boxes show correlation values between features, diagonal boxes show the distributions, and lower boxes are scatter plots.}
+    \label{weekly_sales}
+\end{figure}
+
 
 \subsection{Holidays}
 
