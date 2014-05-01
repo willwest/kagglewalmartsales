@@ -4,7 +4,8 @@ Source code for submissions in Kaggle's Walmart Stores Sales Forecasting predict
 ## Report
 See report.pdf for full report.
 
-## Files
+## Files/Directories
+| name | description |
 -----------------------------------------------------
 | bin/ | all relevant executables and library files |
 | data/ | all data files |
@@ -15,3 +16,4 @@ See report.pdf for full report.
 | predict/ | scripts for modeling and prediction |
 | report/ | LaTeX files for report |
 | report.pdf | report PDF |
+------------------------------------------------------
